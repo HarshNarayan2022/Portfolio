@@ -1,0 +1,237 @@
+
+
+@media screen and (max-width: 1100px){
+    :root{
+        --nav-color:rgb(208, 243, 243);
+    }
+    .burger{
+        position: absolute;
+        cursor: pointer;
+        right: 5%;
+        top: 50%;
+        transform: translate(-5% , -50%);
+        z-index: 2;
+     }
+       
+    .line{
+        width: 30px;
+        height: 3px;
+        background:  #4b5b39;
+        margin: 5px;
+    }
+
+    .burger:hover .line{
+        transform-origin: 50% 50%;
+        animation: line-grow ease-out 400ms   ;
+    }
+    .burger:focus .line{
+        transform-origin: 50% 50%;
+        animation: line-grow ease-out 400ms   ;
+    }
+
+    @keyframes line-grow{
+        0%{transform: scaleX(1);}
+        50%{transform: scaleX(1.5);}
+        100%{transform: scaleX(1);}
+    }
+
+    .logo img{
+        width: 80%;
+    }
+
+    .logo{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navbar{
+        position: relative;
+       
+     
+        
+    }
+
+
+     .nav-links{
+        position: sticky;
+        height: 50vh;
+        width: 100%;
+        background:var(--nav-color);
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+        clip-path: circle(100px at 90% -10%);
+        -webkit-clip-path: circle(100px at 90% -10%);
+        transition: all 1s ease-out;
+        pointer-events: none;
+    }
+ 
+    .nav-links.open{
+        clip-path: circle(1000px at 90% -10%);
+        -webkit-clip-path: circle(1000px at 90% -10%);
+        pointer-events: all;
+        justify-content: flex-start;
+        
+            height: 60vh;
+          
+    }
+
+    .nav-links li{
+        opacity: 0;
+        justify-content: center;
+        display: flex;
+    }
+
+    .nav-links li a{
+
+        font-size: 18px;
+    }
+
+    .nav-links li:nth-child(1){
+        transition: all 0.5s ease 0.2s;
+    }
+    .nav-links li:nth-child(2){
+        transition: all 0.5s ease 0.4s;
+    }
+    .nav-links li:nth-child(3){
+        transition: all 0.5s ease 0.6s;
+    }
+    .nav-links li:nth-child(4){
+        transition: all 0.5s ease 0.8s;
+    }
+    .nav-links li:nth-child(5){
+        transition: all 0.5s ease 0.8s;
+    }
+ 
+    li.fade{
+        opacity: 1;
+    }
+
+    .typewriter{
+        min-height: 25vh;
+    }
+
+    .my-name {
+        font-size: clamp( 1rem , 1vw + 1rem , 2rem);
+        position: relative;
+        font-family: 'Source Code Pro', monospace;
+        width: max-content;
+      }
+
+      .subtitles {
+        font-size: 1.2rem;
+      }
+
+      .heading {
+        font-size: 1rem;
+        padding-top: 0 ;
+      }
+
+      .headings {
+        font-size: 1rem;
+      }
+
+
+      .main  {
+        height: 90vh;
+    }
+
+
+    .section-about {
+        background: var(--bg-color);
+        height: 60vh;
+        display: grid;
+        grid-template-columns: repeat(6,1fr);
+        grid-gap: 1rem;
+        margin: 1rem 0rem;
+        padding-top: 20px;
+    }
+      
+
+      .card {
+        height: 10rem;
+        border-radius: 1rem;
+        font-size: 0.9rem;
+        font-family: sans-serif;
+        padding: 1rem;
+        box-shadow: -0.3rem 0.7rem 1rem rgb(39, 39, 39);
+        border: 2px solid rgb(39, 39, 39);
+        gap: 2rem;
+      }
+
+      .card.active {
+        grid-column: 1 / span 6;
+        grid-row: 1;
+        order: 0;
+        height: auto;
+      }
+
+      .card.active p {
+        display: block;
+        line-height: inherit;
+        padding: 0 0.8rem;
+      }
+
+
+      .portfolio {
+        height: max-content;
+        display: grid;
+        place-items: center;
+        background: var(--bg-color);
+      }
+
+
+      .container {
+        width: 70%;
+        padding: 2rem;
+        flex-direction: column;
+      }
+
+
+
+
+     /****CONTACT PAGE****/
+
+      .alpha-contact{
+        height: 100vh;
+     }
+        
+    
+     .contacts{
+        height: 80vh;
+        width: 90%;
+        position: absolute;
+        background: linear-gradient(to right bottom,
+                     rgba(255,225,225,0.7),
+                     rgba(255,225,225,0.3));
+        border-radius: 1rem;
+        z-index: 2;
+        backdrop-filter: blur(2rem);
+    }
+    
+    .form{
+        max-width: 80%;
+        margin: 23px auto;
+        /* margin-right: 2rem; */
+        /* margin-left: 1rem;  */
+    
+        
+    }
+
+    /*******FOOTER******/
+    .contact-left{
+        height: 10vh;
+    }
+
+    .contact-left p {
+        margin-top: 20px;
+        font-size: 15px;
+      }
+      .social-icons {
+        margin-top: 23px;
+      }
+
+}
+
