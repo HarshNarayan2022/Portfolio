@@ -36,7 +36,7 @@
     }
 
     .logo img{
-        width: 80%;
+        width: 50%;
     }
 
     .logo{
@@ -60,7 +60,7 @@
         width: 100%;
         background:var(--nav-color);
         flex-direction: column;
-        gap: 2rem;
+        gap: 1.5rem;
         align-items: center;
         clip-path: circle(100px at 90% -10%);
         -webkit-clip-path: circle(100px at 90% -10%);
@@ -86,7 +86,7 @@
 
     .nav-links li a{
 
-        font-size: 18px;
+        font-size: 16px;
     }
 
     .nav-links li:nth-child(1){
